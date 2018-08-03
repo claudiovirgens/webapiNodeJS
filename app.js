@@ -9,5 +9,6 @@ app.use(bodyParser.json())
 const router = express.Router()
 router.get('/',(requestAnimationFrame,req) => res.json({message:'Funcionando!'}))
 app.use('/',router)
-//app.listen(port)
+// Codigo para iniciar o servidor
+app.listen(port)
 console.log('Api Funcionando !')
