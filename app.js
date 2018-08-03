@@ -13,3 +13,9 @@ app.use('/',router)
 // Codigo para iniciar o servidor
 app.listen(port)
 console.log('Api Funcionando !')
+
+//GET Clientes
+router.get('/clientes', (req, res) => global.db.findCustomers((err,docs) => {
+    if(err)res.status(500).json(err)
+    else res.json(docs)
+}))
